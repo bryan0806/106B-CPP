@@ -47,3 +47,6 @@ win32 {
     copyToDestdir($$PWD/res)
     copyToDestdir($$PWD/lib/*.jar)
 }
+
+OTHER_FILES += \
+    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-Debug/simple.txt

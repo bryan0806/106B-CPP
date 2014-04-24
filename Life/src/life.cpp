@@ -15,13 +15,27 @@
 #include "simpio.h"
 using namespace std;
 
-int main() {
-    setConsoleSize(700, 400);
+void ReadFile(string);
+
+int main(void) {
+    string filename;
+    cout << "enter name:";
+    cin >> filename;
+
+    ReadFile(filename);
 
 
-    // TODO: Finish the program!
 
-
-    cout << "Have a nice Life!" << endl;
     return 0;
+}
+
+void ReadFile(string fn){
+    ifstream inf;
+    openFile(inf,fn);
+    string line;
+    while(getline(inf,line)){
+        cout << line<<endl;
+    }
+
+
 }
