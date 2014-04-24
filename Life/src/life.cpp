@@ -30,10 +30,19 @@ int main(void) {
 }
 
 void ReadFile(string fn){
+    int rows;
+    int columns;
+    Grid<char>mgrid () ;
     ifstream inf;
     openFile(inf,fn);
     string line;
-    while(getline(inf,line)){
+    getline(inf,line);
+    rows = stringToInteger(line);
+    getline(inf,line);
+    columns = stringToInteger(line);
+    mgrid.resize(rows,columns);
+
+    while(true){
         cout << line<<endl;
     }
 
