@@ -32,7 +32,7 @@ int main(void) {
 void ReadFile(string fn){
     int rows;
     int columns;
-    Grid<char>mgrid () ;
+
     ifstream inf;
     openFile(inf,fn);
     string line;
@@ -40,11 +40,11 @@ void ReadFile(string fn){
     rows = stringToInteger(line);
     getline(inf,line);
     columns = stringToInteger(line);
-    mgrid.resize(rows,columns);
-
-    while(true){
-        cout << line<<endl;
-    }
+    //mgrid.resize(rows,columns); //will fail , so change another way to construct
+    Grid<char> mgrid(rows,columns);
+    //while(true){
+       // cout << line<<endl;
+    //}
 
 
 }
