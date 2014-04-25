@@ -15,13 +15,36 @@
 #include "simpio.h"
 using namespace std;
 
-int main() {
-    setConsoleSize(700, 400);
+void ReadFile(string);
+
+int main(void) {
+    string filename;
+    cout << "enter name:";
+    cin >> filename;
+
+    ReadFile(filename);
 
 
-    // TODO: Finish the program!
 
-
-    cout << "Have a nice Life!" << endl;
     return 0;
+}
+
+void ReadFile(string fn){
+    int rows;
+    int columns;
+    Grid<char>mgrid () ;
+    ifstream inf;
+    openFile(inf,fn);
+    string line;
+    getline(inf,line);
+    rows = stringToInteger(line);
+    getline(inf,line);
+    columns = stringToInteger(line);
+    mgrid.resize(rows,columns);
+
+    while(true){
+        cout << line<<endl;
+    }
+
+
 }
