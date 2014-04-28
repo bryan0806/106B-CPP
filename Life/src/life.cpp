@@ -16,29 +16,39 @@
 using namespace std;
 
 void ReadFile(string,Grid<char> &);
-void NextGen(Grid<char> &);
+Grid<char> NextGen(Grid<char>);
 int getNeighbor(int, int,Grid<char> &);
+void PrintGrid(Grid<char>);
 
 int main(void) {
     string filename;
+    char select;
     cout << "enter name:";
     cin >> filename;
 
-    Grid<char> mgrid(2,2);
-    ReadFile(filename, mgrid);
+    Grid<char> mgrid(2,2); // a random number new Grid class object
+    ReadFile(filename, mgrid);//read file into grid
 
-    // for testing the grid control
-    int i,j;
-    for(i=0;i<mgrid.nRows;i++){
-        for(j=0;j<mgrid.nCols;j++){
-            cout<<mgrid[i][j];
-        }
-        cout<<endl;
-    }
+    PrintGrid(mgrid); // print out the contect of grid
+
 
     //start stage 4 to calculate next generation
-    NextGen(mgrid);
+    cout << "a)nimate, t)ick, q)uit?" << endl;
+    cin.get(select);
 
+    while(select != 'q'){
+    if(select == 't'){
+        mgrid=NextGen(mgrid);
+        cout<<"Afer next"<<endl;
+
+        PrintGrid(mgrid);
+    }else if(select =='a'){
+        cout << "this is a"<<endl;
+    }
+
+    cout<<"a)nimate, t)ick, q)uit?"<<endl;
+    cin.get(select);
+    }
 
     return 0;
 }
@@ -83,20 +93,28 @@ void ReadFile(string fn,Grid<char> & gridc){
 
 }
 
-void NextGen(Grid<char> & gridc){
+Grid<char> NextGen(Grid<char> gridc){
     int i,j,neinum;
+    Grid<char> pgrid(gridc.nRows,gridc.nCols);
     //cout<<gridc.nCols;
     for(i=0;i<gridc.nRows;i++){
        for(j=0;j<gridc.nCols;j++){
+            pgrid[i][j]=gridc[i][j];
             neinum = getNeighbor(i,j,gridc);
-            cout<<"i="<<i<<" and j="<<j<<" ,has neighbor "<<neinum<<endl;
-
+            //cout<<"i="<<i<<" and j="<<j<<" ,has neighbor "<<neinum<<endl;
+            if(neinum<=1){
+                pgrid[i][j]='-';
+            }else if(neinum==3){
+                pgrid[i][j]='X';
+            }else if(neinum>=4){
+                pgrid[i][j]='-';
+            }
 
 
        }
     }
 
-
+    return pgrid;
 
 }
 
@@ -117,4 +135,15 @@ int getNeighbor(int row, int col, Grid<char> &gridc){
     }
 
     return neinum;
+}
+
+void PrintGrid(Grid<char> pgrid){
+    int k,l;
+    for(k=0;k<pgrid.nRows;k++){
+        for(l=0;l<pgrid.nCols;l++){
+            cout<<pgrid[k][l];
+        }
+        cout<<endl;
+    }
+
 }
