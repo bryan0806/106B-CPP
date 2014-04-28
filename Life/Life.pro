@@ -49,4 +49,11 @@ win32 {
 }
 
 OTHER_FILES += \
-    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-Debug/simple.txt
+    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-Debug/simple.txt \
+    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/diehard.txt \
+    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/dinner-table.txt \
+    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/fish.txt \
+    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/flower.txt \
+    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/glider.txt \
+    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/rpent.txt \
+    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/seeds.txt

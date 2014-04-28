@@ -16,6 +16,8 @@
 using namespace std;
 
 void ReadFile(string,Grid<char> &);
+void NextGen(Grid<char> &);
+int getNeighbor(int, int,Grid<char> &);
 
 int main(void) {
     string filename;
@@ -25,6 +27,17 @@ int main(void) {
     Grid<char> mgrid(2,2);
     ReadFile(filename, mgrid);
 
+    // for testing the grid control
+    int i,j;
+    for(i=0;i<mgrid.nRows;i++){
+        for(j=0;j<mgrid.nCols;j++){
+            cout<<mgrid[i][j];
+        }
+        cout<<endl;
+    }
+
+    //start stage 4 to calculate next generation
+    NextGen(mgrid);
 
 
     return 0;
@@ -66,6 +79,42 @@ void ReadFile(string fn,Grid<char> & gridc){
 }
 
 
-    cout << gridc.toString();
+    //cout << gridc.toString()<<endl;
 
+}
+
+void NextGen(Grid<char> & gridc){
+    int i,j,neinum;
+    //cout<<gridc.nCols;
+    for(i=0;i<gridc.nRows;i++){
+       for(j=0;j<gridc.nCols;j++){
+            neinum = getNeighbor(i,j,gridc);
+            cout<<"i="<<i<<" and j="<<j<<" ,has neighbor "<<neinum<<endl;
+
+
+
+       }
+    }
+
+
+
+}
+
+int getNeighbor(int row, int col, Grid<char> &gridc){
+    int i,j,neinum = 0;
+    for(i=row-1;i<=row+1;i++){
+        for(j=col-1;j<=col+1;j++){
+            if(i==row && j==col){
+
+            }else if(!gridc.inBounds(i,j)){
+
+            }else if(gridc[i][j]=='X'){
+                neinum++;
+            }
+
+        }
+
+    }
+
+    return neinum;
 }
