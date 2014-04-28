@@ -15,20 +15,22 @@
 #include "simpio.h"
 using namespace std;
 
-void ReadFile(string);
+void ReadFile(string,Grid<char> &);
 
 int main(void) {
     string filename;
     cout << "enter name:";
     cin >> filename;
 
-    ReadFile(filename);
+    Grid<char> mgrid(2,2);
+    ReadFile(filename, mgrid);
 
 
 
     return 0;
 }
 
+<<<<<<< HEAD
 void ReadFile(string fn){
     int rows;
     int columns;
@@ -36,15 +38,27 @@ void ReadFile(string fn){
     //Grid<char> mgrid () ;
 
 
+=======
+
+void ReadFile(string fn,Grid<char> & gridc){
+
+    int rows,columns;
+>>>>>>> FETCH_HEAD
 
     ifstream inf;
     openFile(inf,fn);
     string line;
+
     getline(inf,line);
+    cout << line << endl;
     rows = stringToInteger(line);
+
+    //cout << rows;
     getline(inf,line);
+    cout << line << endl;
     columns = stringToInteger(line);
 
+<<<<<<< HEAD
     //mgrid.resize(rows,columns);
     //mgrid.resize(rows,columns);
     //while(true){
@@ -62,8 +76,26 @@ void ReadFile(string fn){
             mgrid[i][j]=inf.get();
         }
     }
+=======
+    //cout << columns;
+    gridc.resize(rows,columns); //will fail , so change another way to construct
+
+    //cout<<"mgrid's col is" << mgrid.nCols;
+    int i=0,j=0;
+
+    while(gridc.inBounds(i,j)){
+
+        while(j<columns){
+            gridc[i][j]=inf.get();
+            j++;
+    }
+        j=0;
+        i++;
+        inf.get();
+}
+>>>>>>> FETCH_HEAD
 
 
-    mgrid.toString();
+    cout << gridc.toString();
 
 }
