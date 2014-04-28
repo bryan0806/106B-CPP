@@ -46,10 +46,12 @@ void ReadFile(string fn){
        // cout << line<<endl;
     //}
     int i,j;
-    if(i=0;i<rows;i++){
-
+    if(i=0,i<rows,i++){
+        if(j=0,j<columns,j++){
+            mgrid[i][j]=inf.get();
+        }
     }
 
-
+    mgrid.toString();
 
 }
