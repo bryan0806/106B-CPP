@@ -46,27 +46,18 @@ int main(void) {
         cout << "this is a"<<endl;
     }
 
-    cout<<"a)nimate, t)ick, q)uit?"<<endl;
+    cout<<"a)nimate, t)ick, q)uit?";
     cin.get(select);
     }
 
     return 0;
 }
 
-<<<<<<< HEAD
-void ReadFile(string fn){
-    int rows;
-    int columns;
 
-    //Grid<char> mgrid () ;
-
-
-=======
 
 void ReadFile(string fn,Grid<char> & gridc){
 
     int rows,columns;
->>>>>>> FETCH_HEAD
 
     ifstream inf;
     openFile(inf,fn);
@@ -81,25 +72,7 @@ void ReadFile(string fn,Grid<char> & gridc){
     cout << line << endl;
     columns = stringToInteger(line);
 
-<<<<<<< HEAD
-    //mgrid.resize(rows,columns);
-    //mgrid.resize(rows,columns);
-    //while(true){
-      //  cout << line<<endl;
-   // }
 
-    //mgrid.resize(rows,columns); //will fail , so change another way to construct
-    Grid<char> mgrid(rows,columns);
-    //while(true){
-       // cout << line<<endl;
-    //}
-    int i,j;
-    if(i=0,i<rows,i++){
-        if(j=0,j<columns,j++){
-            mgrid[i][j]=inf.get();
-        }
-    }
-=======
     //cout << columns;
     gridc.resize(rows,columns); //will fail , so change another way to construct
 
@@ -116,7 +89,7 @@ void ReadFile(string fn,Grid<char> & gridc){
         i++;
         inf.get();
 }
->>>>>>> FETCH_HEAD
+
 
 
     //cout << gridc.toString()<<endl;
