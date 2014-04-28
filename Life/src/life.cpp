@@ -30,20 +30,11 @@ int main(void) {
     return 0;
 }
 
-//<<<<<<< HEAD
+
 void ReadFile(string fn,Grid<char> & gridc){
 
     int rows,columns;
-/*=======
-void ReadFile(string fn){
-    int rows;
-    int columns;
-//<<<<<<< HEAD
-    Grid<char> mgrid () ;*/
-/*=======
 
->>>>>>> FETCH_HEAD
->>>>>>> bdc8bac3f00ff63ee46ebe3f8a83ea3effafc656*/
     ifstream inf;
     openFile(inf,fn);
     string line;
@@ -56,7 +47,7 @@ void ReadFile(string fn){
     getline(inf,line);
     cout << line << endl;
     columns = stringToInteger(line);
-//<<<<<<< HEAD
+
     //cout << columns;
     gridc.resize(rows,columns); //will fail , so change another way to construct
 
@@ -73,32 +64,7 @@ void ReadFile(string fn){
         i++;
         inf.get();
 }
-    /*int i,j;
-=======
-<<<<<<< HEAD
-    //mgrid.resize(rows,columns);
-    mgrid.resize(rows,columns);
-    //while(true){
-      //  cout << line<<endl;
-   // }
-=======
-    //mgrid.resize(rows,columns); //will fail , so change another way to construct
-    Grid<char> mgrid(rows,columns);
-    //while(true){
-       // cout << line<<endl;
-    //}
-    int i,j;
->>>>>>> bdc8bac3f00ff63ee46ebe3f8a83ea3effafc656
-    if(i=0,i<rows,i++){
-        if(j=0,j<columns,j++){
-            mgrid[i][j]=inf.get();
-        }
-<<<<<<< HEAD
-    }
-=======
-    }
->>>>>>> FETCH_HEAD
->>>>>>> bdc8bac3f00ff63ee46ebe3f8a83ea3effafc656*/
+
 
     cout << gridc.toString();
 
