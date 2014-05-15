@@ -43,3 +43,6 @@ win32 {
 macx {
     cache()
 }
+
+OTHER_FILES += \
+    aaa.txt
