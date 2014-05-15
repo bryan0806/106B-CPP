@@ -26,9 +26,9 @@ using namespace std;
 void MostFrequentCharacter(ifstream &ifn, int &numOccurrences);
 
 int main() {
-    setConsoleSize(750, 450);
+    /*setConsoleSize(750, 450);
     setConsoleFont("Courier New-16");
-    setConsoleEcho(true);
+    setConsoleEcho(true);*/
 
     /* Problem 3
     // test for scanner class
@@ -50,18 +50,22 @@ int main() {
      by scanning through the file stream, analyzing each character and storing
      an updated count in a map. Then, after you’ve built this table, iterate over
      it to find the character that occurred the most often.*/
-    string filename;
-    int numOccurences;
-    fstream ifn;
-    char result;
+    string filename="aaa.txt";
+    int numOccurrences=0;
+    ifstream ifn;
+    char result,word;
 
     cout << "enter name:";
-    cin >> filename;
-
-    ifn.open(filename,ios::in);
-
-
-    MostFrequentCharacter(&ifn, &numOccurrences);
+    //cin >> filename;
+    //ifn.open(filename.c_str());
+    //if (ifn.fail()) cout<<"Couldn't read '" << filename << "'";
+    if(openFile(ifn,filename)){
+        cout << "open ok!"<<endl;
+    while(ifn.get(word)){
+        cout << word;
+    }
+}
+    //MostFrequentCharacter(ifn,numOccurrences);
 
 
 
@@ -79,9 +83,10 @@ void MostFrequentCharacter(ifstream &ifn, int &numOccurrences){
     char word;
     string allstring;
 
-    ifn >> allstring;
+    while(ifn.get(word)){
+        cout << word;
+    }
 
-    cout << allstring;
 
 
 

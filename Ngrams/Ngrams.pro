@@ -45,4 +45,5 @@ macx {
 }
 
 OTHER_FILES += \
-    aaa.txt
+    aaa.txt \
+    bbb.txt
