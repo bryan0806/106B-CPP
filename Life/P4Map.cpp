@@ -25,6 +25,9 @@
 using namespace std;
 
 void MostFrequentCharacter(ifstream &ifn, int &numOccurrences);
+void findmax(char key,int value);
+char maxword;
+static int maxvalue=0;
 
 int main() {
     /*setConsoleSize(750, 450);
@@ -81,18 +84,38 @@ int main() {
 
 void MostFrequentCharacter(ifstream &ifn, int &numOccurrences){
     Map<char,int> wordCount;
-    char word;
+    char word,mostHappenWord;
     string allstring;
-    openFile(ifn,"aaa.txt");
+    int count;
+    openFile(ifn,"bbb.txt");
+
 
     while(ifn.get(word)){
-        cout << word;
+        if(wordCount.containsKey(word)){
+            count = wordCount.get(word);
+            wordCount.put(word,count+1);
+        }else{
+            count=1;
+            wordCount.put(word,count);
+        }
     }
 
+    wordCount.mapAll(findmax);
 
-
-
+    cout << "the most happen word is " << maxword << endl;
+    cout << "it happened " << maxvalue << " times"<< endl;
 
 
 }
 
+
+void findmax(char key,int value){
+
+    if(value>maxvalue){
+        maxword=key;
+        maxvalue=value;
+    }
+
+
+
+}
