@@ -50,22 +50,22 @@ int main() {
      by scanning through the file stream, analyzing each character and storing
      an updated count in a map. Then, after you’ve built this table, iterate over
      it to find the character that occurred the most often.*/
-    string filename="aaa.txt";
+    string filename;
     int numOccurrences=0;
     ifstream ifn;
     char result,word;
-
-    cout << "enter name:";
+    filename = "readme.txt";
+    cout << filename<<endl;
     //cin >> filename;
     //ifn.open(filename.c_str());
     //if (ifn.fail()) cout<<"Couldn't read '" << filename << "'";
-    if(openFile(ifn,filename)){
-        cout << "open ok!"<<endl;
-    while(ifn.get(word)){
-        cout << word;
-    }
-}
-    //MostFrequentCharacter(ifn,numOccurrences);
+    //if(openFile(ifn,filename)){
+      //  cout << "open ok!"<<endl;
+    //while(ifn.get(word)){
+      //  cout << word;
+    //}
+
+    MostFrequentCharacter(ifn,numOccurrences);
 
 
 
@@ -82,6 +82,7 @@ void MostFrequentCharacter(ifstream &ifn, int &numOccurrences){
     Map<char,int> wordCount;
     char word;
     string allstring;
+    openFile(ifn,"aaa.txt"); // must put in res folder
 
     while(ifn.get(word)){
         cout << word;
