@@ -1,3 +1,4 @@
+
 // This is the CPP file you will edit and turn in.
 // Also remove these comments here and add your own.
 // TODO: remove this comment header
@@ -54,7 +55,7 @@ int main() {
     int numOccurrences=0;
     ifstream ifn;
     char result,word;
-    filename = "readme.txt";
+    filename = "simple.txt";
     cout << filename<<endl;
     //cin >> filename;
     //ifn.open(filename.c_str());
@@ -82,7 +83,7 @@ void MostFrequentCharacter(ifstream &ifn, int &numOccurrences){
     Map<char,int> wordCount;
     char word;
     string allstring;
-    openFile(ifn,"aaa.txt"); // must put in res folder
+    openFile(ifn,"aaa.txt");
 
     while(ifn.get(word)){
         cout << word;
@@ -94,3 +95,4 @@ void MostFrequentCharacter(ifstream &ifn, int &numOccurrences){
 
 
 }
+
