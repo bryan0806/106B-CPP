@@ -15,6 +15,7 @@
 #include "simpio.h"
 using namespace std;
 
+/*
 void ReadFile(string,Grid<char> &);
 Grid<char> NextGen(Grid<char>);
 int getNeighbor(int, int,Grid<char> &);
@@ -150,3 +151,6 @@ void PrintGrid(Grid<char> pgrid){
     }
 
 }
+*/
+
+

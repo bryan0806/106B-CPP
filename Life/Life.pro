@@ -5,7 +5,8 @@ CONFIG += no_include_pwd
 #CONFIG += static
 #CONFIG += staticlib
 
-SOURCES = $$PWD/src/*.cpp
+SOURCES = $$PWD/src/*.cpp \
+    P4Map.cpp
 SOURCES += $$PWD/lib/StanfordCPPLib/*.cpp
 HEADERS = $$PWD/src/*.h
 HEADERS += $$PWD/lib/StanfordCPPLib/*.h
@@ -56,4 +57,5 @@ OTHER_FILES += \
     ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/flower.txt \
     ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/glider.txt \
     ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/rpent.txt \
-    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/seeds.txt
+    ../build-Life-Desktop_Qt_5_2_1_MinGW_32bit-GCC/seeds.txt \
+    ../Ngrams/aaa.txt
