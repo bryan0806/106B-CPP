@@ -15,7 +15,7 @@
 #include "simpio.h"
 using namespace std;
 
-/*
+/* this hidden is for testing other project , because need its start file to compile...
 void ReadFile(string,Grid<char> &);
 Grid<char> NextGen(Grid<char>);
 int getNeighbor(int, int,Grid<char> &);
