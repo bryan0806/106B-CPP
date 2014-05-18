@@ -19,78 +19,41 @@
 #include "set.h"
 #include "simpio.h"
 #include "vector.h"
-#include "tokenscanner.h"
 
 using namespace std;
 
-void MostFrequentCharacter(ifstream &ifn, int &numOccurrences);
+typedef Map<Vector<string>, string> NGRAM;
+
+NGRAM readFile(string fn,int n);
 
 int main() {
-    /*setConsoleSize(750, 450);
-    setConsoleFont("Courier New-16");
-    setConsoleEcho(true);*/
+    setConsoleSize(1500, 900);
+    setConsoleFont("Courier New-28");
+    setConsoleEcho(true);
 
-    /* Problem 3
-    // test for scanner class
-    string words="<html><b><i>CS106 rules!</i></b></html>";
-    TokenScanner scanner(words);
-    scanner.ignoreWhitespace();
-    while(scanner.hasMoreTokens()){
-        string token = scanner.nextToken();
-        cout << token << endl;
-
-    }*/
-
-    /*Problem 4: Map Warm-up
-     Write a function:
-     char MostFrequentCharacter(ifstream &if, int &numOccurrences);
-     that given an input file stream, returns the character that occurs
-     the most frequently and stores the number of times it occurs in the
-     reference parameter numOccurrences. To write this function, first start
-     by scanning through the file stream, analyzing each character and storing
-     an updated count in a map. Then, after you’ve built this table, iterate over
-     it to find the character that occurred the most often.*/
+    int n,gnum;
+    cout << "Please enter N:";
+    cin >> n;
     string filename;
-    int numOccurrences=0;
-    ifstream ifn;
-    char result,word;
-    filename = "readme.txt";
-    cout << filename<<endl;
-    //cin >> filename;
-    //ifn.open(filename.c_str());
-    //if (ifn.fail()) cout<<"Couldn't read '" << filename << "'";
-    //if(openFile(ifn,filename)){
-      //  cout << "open ok!"<<endl;
-    //while(ifn.get(word)){
-      //  cout << word;
-    //}
-
-    MostFrequentCharacter(ifn,numOccurrences);
-
-
-
+    cout << "Input file?";
+    cin >> filename;
+    cout << "\n";
+    cout <<"# of random words to generate (0 to quit)?";
+    cin >> gnum;
 
     // TODO: Finish the program!
+    NGRAM ngrammap;
+    ngrammap = readFile(filename,n);
+
 
 
     cout << "Exiting." << endl;
     return 0;
 }
 
-
-void MostFrequentCharacter(ifstream &ifn, int &numOccurrences){
-    Map<char,int> wordCount;
-    char word;
-    string allstring;
-    openFile(ifn,"aaa.txt"); // must put in res folder
-
-    while(ifn.get(word)){
-        cout << word;
-    }
-
-
-
-
-
-
+NGRAM readFile(string fn, int n){
+    NGRAM map;
+    cout<<"ok";
+    return map;
 }
+
