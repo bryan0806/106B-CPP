@@ -21,10 +21,23 @@
 #include "vector.h"
 
 using namespace std;
-
-typedef Map<Vector<string>, string> NGRAM;
+typedef Vector<string> keyvector;
+typedef Map<keyvector,keyvector> NGRAM;
 
 NGRAM readFile(string fn,int n);
+
+bool operator<( const Vector<string>& lhs, const Vector<string>& rhs )
+{
+    int pos = 0;
+    while( true ) {
+        if( pos == lhs.size() && pos == rhs.size() ) return false;
+        if( pos == lhs.size() ) return true;
+        if( pos == rhs.size() ) return false;
+        if( lhs[ pos ] < rhs[ pos ] ) return true;
+        if( rhs[ pos ] < lhs[ pos ] ) return false;
+        ++pos;
+    }
+}
 
 int main() {
     setConsoleSize(1500, 900);
