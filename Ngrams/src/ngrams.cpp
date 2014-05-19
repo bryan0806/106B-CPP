@@ -27,6 +27,7 @@ typedef Map<keyvector,keyvector> NGRAM;
 
 NGRAM readFile(string fn,int n);
 
+// this code is from http://stackoverflow.com/questions/19344087/mapvectorstring-string-giving-me-an-error
 bool operator<( const Vector<string>& lhs, const Vector<string>& rhs )
 {
     int pos = 0;
