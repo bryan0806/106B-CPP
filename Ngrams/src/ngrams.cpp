@@ -19,6 +19,7 @@
 #include "set.h"
 #include "simpio.h"
 #include "vector.h"
+#include "tokenscanner.h"
 
 using namespace std;
 typedef Vector<string> keyvector;
@@ -40,8 +41,8 @@ bool operator<( const Vector<string>& lhs, const Vector<string>& rhs )
 }
 
 int main() {
-    setConsoleSize(1500, 900);
-    setConsoleFont("Courier New-28");
+    setConsoleSize(750, 450);
+    setConsoleFont("Courier New-18");
     setConsoleEcho(true);
 
     int n,gnum;
@@ -66,7 +67,59 @@ int main() {
 
 NGRAM readFile(string fn, int n){
     NGRAM map;
-    cout<<"ok";
+    keyvector value;
+    keyvector window;
+    string token,last;
+    Queue<string> wrap;
+
+    ifstream ifs;
+    openFile(ifs,fn);
+    TokenScanner scanner(ifs);
+    scanner.ignoreWhitespace();
+    while(scanner.hasMoreTokens() || !wrap.isEmpty()){
+
+        token = scanner.nextToken();
+        //cout << token << endl; // for test
+
+        if(map.size()==0 && window.size()<n-1){ // first key set up
+            window.add(token);
+            wrap.enqueue(token);
+        }else if(token==""  && !wrap.isEmpty()){ //wrap around handle
+
+            value.clear();
+            last=wrap.dequeue();
+            //cout<<last<<endl; //for test
+            //cout<<window<<endl; //for test
+            value.add(last);
+            map.put(window,value);
+            window.remove(0);
+            window.add(last);
+        }else{
+            if(map.containsKey(window)){ // if key happened before
+                value=map.get(window);
+                value.add(token);
+                map[window]=value;
+                window.remove(0);
+                window.add(token);
+            }else{ // else
+                value.clear();
+                value.add(token);
+                map.put(window,value);
+                window.remove(0);
+                window.add(token);
+            }
+
+        }
+
+
+    }
+
+    cout << map.toString()<<endl; //for test
+
+
+
+
+
     return map;
 }
 
