@@ -26,6 +26,7 @@ typedef Vector<string> keyvector;
 typedef Map<keyvector,keyvector> NGRAM;
 
 NGRAM readFile(string fn,int n);
+void writeArticle(NGRAM map,int num);
 
 // this code is from http://stackoverflow.com/questions/19344087/mapvectorstring-string-giving-me-an-error
 bool operator<( const Vector<string>& lhs, const Vector<string>& rhs )
@@ -60,10 +61,39 @@ int main() {
     NGRAM ngrammap;
     ngrammap = readFile(filename,n);
 
-
+    writeArticle(ngrammap,gnum);
 
     cout << "Exiting." << endl;
     return 0;
+}
+
+void writeArticle(NGRAM map,int num){
+    keyvector window;
+    string next;
+    int rannum;
+
+    rannum = randomInteger(0,map.size()-1); // for start point
+    window = map.keys().get(rannum);
+
+    for(int i=0;i<window.size();i++){  // print out first n-1 words
+        cout << "..."<<window[i] << " ";
+    }
+
+    for(int j=0;j<(num-window.size());j++){
+        if(map.get(window).size()>1){ //if the values are more than one
+            rannum = randomInteger(0,map.get(window).size()-1);
+            next = map.get(window).get(rannum);
+            cout << next << " ";
+            window.remove(0);
+            window.add(next);
+        }else{ // only 1 value
+            next = map.get(window).get(0);
+            cout << next << " ";
+            window.remove(0);
+            window.add(next);
+        }
+    }
+    cout << "...";
 }
 
 NGRAM readFile(string fn, int n){
@@ -115,9 +145,9 @@ NGRAM readFile(string fn, int n){
 
     }
 
-    cout << map.toString()<<endl; //for test
-
-
+    //cout << map.toString()<<endl; //for test
+    //window.clear(); //
+    //cout<<map.keys().get(3); //test for start key
 
 
 
