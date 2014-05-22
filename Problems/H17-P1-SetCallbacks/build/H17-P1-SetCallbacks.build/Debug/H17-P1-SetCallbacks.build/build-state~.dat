@@ -1,0 +1,32 @@
+TH17-P1-SetCallbacks
+v7
+r1
+cCheck dependencies
+
+N./H17-P1-SetCallbacks.app
+t2
+s0
+
+N./H17-P1-SetCallbacks.app/Contents/Info.plist
+t2
+s0
+
+N./H17-P1-SetCallbacks.app/Contents/PkgInfo
+t2
+s0
+
+NInfo.plist
+c00000000537CA53A0000000000000326
+t1400677690
+s806
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies422371535#422371535#0(86"[BEROR]error: There is no SDK with the name or path '/Developer/SDKs/MacOSX10.4u.sdk'1(4@78"error: There is no SDK with the name or path '/Developer/SDKs/MacOSX10.4u.sdk'422371535#18446744073709551615#0#0(1@0"0(0#1#0"7738135660106375168#0"0#
+
+CProcessInfoPlistFile ./H17-P1-SetCallbacks.app/Contents/Info.plist Info.plist
+r0
+
+CTouch ./H17-P1-SetCallbacks.app
+r0
+

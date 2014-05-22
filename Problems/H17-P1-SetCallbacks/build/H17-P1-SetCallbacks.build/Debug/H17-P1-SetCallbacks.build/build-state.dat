@@ -1,0 +1,155 @@
+TH17-P1-SetCallbacks
+v7
+r0
+t422465594.119645
+cCheck dependencies
+cProcessInfoPlistFile ./H17-P1-SetCallbacks.app/Contents/Info.plist Info.plist
+cCompileC build/H17-P1-SetCallbacks.build/Debug/H17-P1-SetCallbacks.build/Objects-normal/i386/main.o "/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cLd ./H17-P1-SetCallbacks.app/Contents/MacOS/H17-P1-SetCallbacks normal i386
+cTouch ./H17-P1-SetCallbacks.app
+
+N./H17-P1-SetCallbacks.app
+t1400772794
+s102
+
+N./H17-P1-SetCallbacks.app/Contents/Info.plist
+t1400679024
+s1142
+
+N./H17-P1-SetCallbacks.app/Contents/MacOS/H17-P1-SetCallbacks
+t1400772794
+s47168
+
+N./H17-P1-SetCallbacks.app/Contents/PkgInfo
+t1400679024
+s8
+
+N/System/Library/Frameworks/Carbon.framework/Carbon
+c000000004E2093A0000000000000A5F0
+t1310757792
+s42480
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/System/Library/Frameworks/QuickTime.framework/QuickTime
+c0000000051ECAF910000000000785980
+t1374465937
+s7887232
+
+N/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/build/H17-P1-SetCallbacks.build/Debug/H17-P1-SetCallbacks.build/Objects-normal/i386/H17-P1-SetCallbacks.LinkFileList
+c00000000537CAA7000000000000000AA
+t1400679024
+s170
+
+N/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/build/H17-P1-SetCallbacks.build/Debug/H17-P1-SetCallbacks.build/Objects-normal/i386/main.o
+t1400772794
+s94220
+
+N/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/cs106/bst.h
+c00000000537CA53A0000000000004903
+t1400677690
+s18691
+i"cmpfn.h"
+i"vector.h"
+i<cstdlib>
+
+N/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/cs106/cmpfn.h
+c00000000537CA53A00000000000002C5
+t1400677690
+s709
+
+N/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/cs106/genlib.h
+c00000000537CA53A0000000000000455
+t1400677690
+s1109
+i<string>
+
+N/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/cs106/libcs106.a
+c00000000537CA53A000000000004C730
+t1400677690
+s313136
+
+N/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/cs106/set.h
+c00000000537CA53A000000000000342A
+t1400677690
+s13354
+i"cmpfn.h"
+i"bst.h"
+i"vector.h"
+
+N/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/cs106/strutils.h
+c00000000537CA53A00000000000008A6
+t1400677690
+s2214
+i"genlib.h"
+
+N/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/cs106/vector.h
+c00000000537CA53A0000000000002977
+t1400677690
+s10615
+i"genlib.h"
+i"strutils.h"
+i<cstdlib>
+
+N/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp
+c00000000537E18B900000000000003CD
+t1400772793
+s973
+i<iostream>
+i<string>
+i"Set.h"
+
+NInfo.plist
+c00000000537CA53A0000000000000326
+t1400677690
+s806
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies422465593#422465593#0(0"0(0#1#0"8611859456#0"0#
+
+CCompileC build/H17-P1-SetCallbacks.build/Debug/H17-P1-SetCallbacks.build/Objects-normal/i386/main.o "/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s422465593.457726
+e422465594.034384
+r1
+xCompileC
+xbuild/H17-P1-SetCallbacks.build/Debug/H17-P1-SetCallbacks.build/Objects-normal/i386/main.o
+x/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp: In function 'int Main()':
+o/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp:61: warning: control reaches end of non-void function
+lSLF07#2@95"Compile /Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp422465593#422465594#0(257"/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp: In function 'int Main()':/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp:61: warning: control reaches end of non-void function1(22@40"Control reaches end of non-void function422465593#115#142#0(6@87"/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp422465593#61#0#61#0#40"control reaches end of non-void function0(0#0#87"/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp8612051072#1160"    cd "/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -mfix-and-continue -fvisibility-inlines-hidden -gdwarf-2 "-I/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/build/H17-P1-SetCallbacks.build/Debug/H17-P1-SetCallbacks.build/H17-P1-SetCallbacks.hmap" -Wall -Wno-sign-compare -F. -Ics106 -Iinclude "-I/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/build/H17-P1-SetCallbacks.build/Debug/H17-P1-SetCallbacks.build/DerivedSources/i386" "-I/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/build/H17-P1-SetCallbacks.build/Debug/H17-P1-SetCallbacks.build/DerivedSources" -fstack-check -c "/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/main.cpp" -o "/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/build/H17-P1-SetCallbacks.build/Debug/H17-P1-SetCallbacks.build/Objects-normal/i386/main.o"0#
+
+CLd ./H17-P1-SetCallbacks.app/Contents/MacOS/H17-P1-SetCallbacks normal i386
+s422465594.034502
+e422465594.115907
+r1
+xLd
+x./H17-P1-SetCallbacks.app/Contents/MacOS/H17-P1-SetCallbacks
+xnormal
+xi386
+lSLF07#2@65"Link ./H17-P1-SetCallbacks.app/Contents/MacOS/H17-P1-SetCallbacks422465594#422465594#0(0"0(0#0#0"8612280448#571"    cd "/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks"    /Developer/usr/bin/g++-4.2 -arch i386 -L. -Lcs106 "-L/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/cs106" -F. -filelist "/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/build/H17-P1-SetCallbacks.build/Debug/H17-P1-SetCallbacks.build/Objects-normal/i386/H17-P1-SetCallbacks.LinkFileList" -framework Cocoa -framework Carbon -framework QuickTime -lcs106 -o ./H17-P1-SetCallbacks.app/Contents/MacOS/H17-P1-SetCallbacks0#
+
+CProcessInfoPlistFile ./H17-P1-SetCallbacks.app/Contents/Info.plist Info.plist
+s422371824.842844
+e422371824.930961
+r1
+xProcessInfoPlistFile
+x./H17-P1-SetCallbacks.app/Contents/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist422371824#422371824#0(0"0(0#0#89"/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks/Info.plist30399714100969588#270"    cd "/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks"    builtin-infoPlistUtility Info.plist -genpkginfo ./H17-P1-SetCallbacks.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o ./H17-P1-SetCallbacks.app/Contents/Info.plist0#
+
+CTouch ./H17-P1-SetCallbacks.app
+s422465594.116025
+e422465594.119596
+r1
+xTouch
+x./H17-P1-SetCallbacks.app
+lSLF07#2@31"Touch ./H17-P1-SetCallbacks.app422465594#422465594#0(0"0(0#0#0"8612053504#136"    cd "/Users/bryan0806/Documents/C++ Workspace/106B-CPP/Problems/H17-P1-SetCallbacks"    /usr/bin/touch -c ./H17-P1-SetCallbacks.app0#
+
