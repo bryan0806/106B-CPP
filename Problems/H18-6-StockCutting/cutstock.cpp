@@ -49,7 +49,6 @@ int CutStock(Vector<int> & requests, int stockLength){
 	for (int k=0; k<stockpossible.size(); k++) {
 		if (stockpossible[k] < smallest) {
 			smallest = stockpossible[k];
-			cout << "smallest now " << smallest << endl;
 		}
 	}
 	return smallest;
@@ -57,21 +56,17 @@ int CutStock(Vector<int> & requests, int stockLength){
 
 void recursiveCut(Vector<int> stocks,Vector<int> set,int stockLength,int stockneed){
 	int first;
-	cout << "stockneed is " << stockneed << endl;
  	if (stocks.size()==0) { // finished all elements
-		cout << "end stockneeds " << stockneed << endl;
 		stockpossible.add(stockneed);
 		return;
 	}
 	
 	if (set.size()==0) { // if there is no element in set , it means first time or empty
 		first=stocks[0];
-		cout << "empty set ,first now is " << first << endl;
 		stocks.removeAt(0);
 		set.add(first);
 	}else { // at least one element in set
 		first = countSum(set);
-		cout << "sum of set is " << first << endl;
 	}
 
 	int nextcount=0;
@@ -79,15 +74,12 @@ void recursiveCut(Vector<int> stocks,Vector<int> set,int stockLength,int stockne
 	
 	for (int i=0; i<stocks.size(); i++) { // find next element can be added to set
 		if((first + stocks[i])<=stockLength){ // can move on
-			cout << " can add " << stocks[i] << endl;
 			nextcount++;
-			
 			Vector<int> stocks2,set2;
 			stocks2=stocks;
 			set2=set;
 			set2.add(stocks[i]);
 			stocks2.removeAt(i);
-			cout << " set2 size after adding is " << set2.size() << endl;
 			if (stocks2.size()==0) { // if after throwing recursive and the stocks2 has no element
 				stockneed++;
 			}
@@ -98,14 +90,7 @@ void recursiveCut(Vector<int> stocks,Vector<int> set,int stockLength,int stockne
 	
 	if (nextcount==0) {  // no other element can be added to set
 		stockneed++;  // need a whole stock
-		cout << " set size before clean is " << set.size() << endl;
-		/*for (int j=0; j<set.size(); j++) { // clean set , this is wrong logic .... can not clean all
-			cout << "j is " << j << endl;
-			cout << "set " << set[j] << " ";
-			set.removeAt(j);
-		}*/ 
 		for (int j=(set.size()-1);j>=0 ; j--) {
-			cout << "set " << set[j] << " ";
 			set.removeAt(j);
 		}
 		
