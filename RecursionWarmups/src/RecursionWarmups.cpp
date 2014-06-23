@@ -52,7 +52,22 @@ int countPaths(int street, int avenue) {
 
 bool isBalanced(string exp) {
     // TODO: write this function
+    if(exp=="") return true;
+    if(exp.find('(')!=-1 && exp.find(')')!=-1){
+        exp.erase(exp.find('('),1);
+        exp.erase(exp.find(')'),1);
+        return isBalanced(exp);
+    }else if(exp.find('{')!=-1 && exp.find('}')!=-1){
+        exp.erase(exp.find('{'),1);
+        exp.erase(exp.find('}'),1);
+        return isBalanced(exp);
+    }else if(exp.find('[')!=-1 && exp.find(']')!=-1){
+        exp.erase(exp.find('['),1);
+        exp.erase(exp.find(']'),1);
+        return isBalanced(exp);
+    }else{
     return false;
+    }
 }
 
 void drawSierpinskiTriangle(GWindow& gw, double x, double y, double size, int order) {
