@@ -11,6 +11,7 @@
 #include <string>
 #include "gwindow.h"
 #include "simpio.h"
+#include <math.h>
 using namespace std;
 
 
@@ -72,5 +73,17 @@ bool isBalanced(string exp) {
 
 void drawSierpinskiTriangle(GWindow& gw, double x, double y, double size, int order) {
     // TODO: write this function
+    if(order==0) return;
+    else{
+        cout << "x y size are " << x << " " << y << " " << size << endl;
+        order--;
+        long double height = sqrt(3.0/4.0*(size*size));
+        gw.drawLine(x,y,x+size,y);
+        gw.drawLine(x,y,x+(size/2.0),y+height);
+        gw.drawLine(x+(size/2.0),y+height,x+size,y);
+        drawSierpinskiTriangle(gw,x,y,size/2.0,order);
+        drawSierpinskiTriangle(gw,x+(size/2.0),y,size/2.0,order);
+        drawSierpinskiTriangle(gw,x+(size/4.0),y+(height/2.0),size/2.0,order);
+    }
 
 }
